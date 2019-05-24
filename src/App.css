@@ -10,7 +10,7 @@
     font-style: normal;
 }
 
-:root{
+:root {
     --primaryColor: #5fb7ea;
     --primaryRGBA: rgba(0, 0, 0, 0.3);
     --mainGrey: #fafafa;
@@ -26,6 +26,7 @@ body {
     background: var(--mainGrey) !important;
     color: var(--mainBlack);
 }
+
 .text-navHeader {
     font-family: 'Macondo Swash Caps', cursive;
 }
@@ -33,6 +34,7 @@ body {
 .text-main {
     color: var(--primaryColor);
 }
+
 .text-title {
     font-weight: bold;
 }
