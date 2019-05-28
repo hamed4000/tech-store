@@ -5,39 +5,39 @@ import logo from "../images/logo.svg"
 import styled from "styled-components";
 
 const NavWrapper = styled.nav`
-  position: sticky;
   position: -webkit-sticky;
+  position: sticky;
   top: 0;
   width: 100%;
   padding: 1rem 1.5rem;
-  background: var(--mainGray);
+  background: var(--mainGrey);
   border-bottom: 3px solid var(--primaryColor);
-  .nav-center{
+  .nav-center {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     max-width: 1170px;
     margin: 0 auto;
   }
-  .nav-icon{
+  .nav-icon {
     font-size: 1.5rem;
-    cursor:pointer;
+    cursor: pointer;
   }
-  .nav-cart{
-    position:relative;
+  .nav-cart {
+    position: relative;
   }
-  .cart-items{
-    font-size: .85rem;
+  .cart-items {
+    background: var(--primaryColor);
+    color: var(--mainWhite);
+    font-size: 0.85rem;
     position: absolute;
     top: -8px;
     right: -8px;
     padding: 0 5px;
-    background: var(--primaryColor);
-    color: var(--mainWhite);
     border-radius: 50%;
   }
-  
 `;
+
 const NavigationBar = () => {
   return (
       <ProductConsumer>
