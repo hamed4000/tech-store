@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import styled from "styled-components";
 import {Link} from "react-router-dom";
 import {ProductConsumer} from "../context/Context";
@@ -68,14 +67,6 @@ const Sidebar = () => {
           }
         }
       </ProductConsumer>
-=======
-
-const Sidebar = () => {
-  return (
-      <div>
-        side bar
-      </div>
->>>>>>> 05074428dc028fe763ac3b74f78682bf0ed77a8f
   );
 };
 

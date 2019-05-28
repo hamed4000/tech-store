@@ -5,7 +5,6 @@ import logo from "../images/logo.svg"
 import styled from "styled-components";
 
 const NavWrapper = styled.nav`
-<<<<<<< HEAD
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -31,48 +30,14 @@ const NavWrapper = styled.nav`
     background: var(--primaryColor);
     color: var(--mainWhite);
     font-size: 0.85rem;
-=======
-  position: sticky;
-  position: -webkit-sticky;
-  top: 0;
-  width: 100%;
-  padding: 1rem 1.5rem;
-  background: var(--mainGray);
-  border-bottom: 3px solid var(--primaryColor);
-  .nav-center{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1170px;
-    margin: 0 auto;
-  }
-  .nav-icon{
-    font-size: 1.5rem;
-    cursor:pointer;
-  }
-  .nav-cart{
-    position:relative;
-  }
-  .cart-items{
-    font-size: .85rem;
->>>>>>> 05074428dc028fe763ac3b74f78682bf0ed77a8f
     position: absolute;
     top: -8px;
     right: -8px;
     padding: 0 5px;
-<<<<<<< HEAD
     border-radius: 50%;
   }
 `;
 
-=======
-    background: var(--primaryColor);
-    color: var(--mainWhite);
-    border-radius: 50%;
-  }
-  
-`;
->>>>>>> 05074428dc028fe763ac3b74f78682bf0ed77a8f
 const NavigationBar = () => {
   return (
       <ProductConsumer>
