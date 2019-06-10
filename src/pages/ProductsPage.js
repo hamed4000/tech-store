@@ -1,9 +1,13 @@
 import React from 'react';
+import Hero from "../components/Hero";
+import Products from "../components/ProductsPage/Products";
+import productsBcg from "../images/productsBcg.jpeg";
 
 const ProductsPage = () => {
     return (
         <>
-            <h1>product page</h1>
+          <Hero img={productsBcg}/>
+          <Products/>
         </>
     );
 };
