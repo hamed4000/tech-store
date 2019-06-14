@@ -161,6 +161,13 @@ class ProductProvider extends Component {
     })
   };
 
+
+  /*cart functionality*/
+  increment = id =>{};
+  decrement = id =>{};
+  removeItem = id => {};
+  clearCart = () =>{};
+
   render() {
     return (
         <ProductContext.Provider value={{
@@ -170,7 +177,11 @@ class ProductProvider extends Component {
           closeCart: this.closeCart,
           openCart: this.openCart,
           addToCart: this.addToCart,
-          setSingleProduct: this.setSingleProduct
+          setSingleProduct: this.setSingleProduct,
+          increment: this.increment,
+          decrement: this.decrement,
+          removeItem: this.removeItem,
+          clearCart: this.clearCart
         }}>
           {this.props.children}
         </ProductContext.Provider>
