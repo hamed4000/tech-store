@@ -55,5 +55,7 @@ body {
     color: var(--primaryColor);
     outline-color: var(--darkGrey);
     text-decoration: none;
-
+}
+.cart-icon{
+    cursor: pointer;
 }
