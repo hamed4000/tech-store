@@ -22,7 +22,7 @@ class ProductProvider extends Component {
     filteredProducts: [],
     featuredProducts: [], // اینایی که میخواهیم در صفحه اصلی دیده بشوند
     singleProduct: {},
-    loading: false
+    loading: true
   };
 
   // handle set product
@@ -42,7 +42,7 @@ class ProductProvider extends Component {
       featuredProducts,
       cart: this.getStorageCart(),
       singleProduct: this.getStorageProduct(),
-      loading : false,
+      loading: false,
     }, () => {
       this.addTotals()
     })
@@ -50,16 +50,11 @@ class ProductProvider extends Component {
 
   // get cart from localStorage
   getStorageCart = () => {
-    let cart;
-    localStorage.getItem("cart") ?
-        cart = JSON.parse(localStorage.getItem("cart"))
-        :
-        cart = [];
-    return cart;
+    return localStorage.getItem("cart") ? JSON.parse(localStorage.getItem("cart")) : [];
   };
   // get product from localStorage
   getStorageProduct = () => {
-    return []
+    return localStorage.getItem("singleProduct") ? JSON.parse(localStorage.getItem("singleProduct")) : {};
   };
   // get totals قیمت کل و تعداد کل محصولات در سبد خرید
   getTotals = () => {
@@ -128,7 +123,14 @@ class ProductProvider extends Component {
     });
   };
   // set single product هرموقع که روی تک محصولات کلیک میکنیم این متود اجرا میشود
+  // برای اینکه محصولی که کلیک شد را در لوکال استورج ذخیره کنیم به جایه اینکه وقتی به صفحه تک محصول رفتیم از api فچش کنیم
   setSingleProduct = id => {
+    let product = this.state.storeProducts.find(item => item.id === id);
+    localStorage.setItem("singleProduct", JSON.stringify(product));
+    this.setState({
+      singleProduct: {...product},
+      loading: false
+    })
   };
 
   componentDidMount() {
