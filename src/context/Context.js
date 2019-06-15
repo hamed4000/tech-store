@@ -180,7 +180,26 @@ class ProductProvider extends Component {
     })
   };
   decrement = id =>{};
-  removeItem = id => {};
+  removeItem = id => {
+    //کپی
+    let tempCart = [...this.state.cart];
+    //پیدا کردن جایه محصول در ارایه کارت
+    let index = tempCart.findIndex(item => item.id ===id);
+    //پاک کردن به دورش زیر
+    // 1.
+    tempCart = [
+      ...tempCart.slice(0, index),
+      ...tempCart.slice(index + 1)
+    ];
+    // 2.
+    // tempCart.splice(index,1);
+    this.setState({
+      cart:[...tempCart]
+    }, ()=>{
+      this.addTotals();
+      this.syncStorage();
+    })
+  };
   clearCart = () =>{};
 
   render() {
