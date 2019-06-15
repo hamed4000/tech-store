@@ -24,11 +24,11 @@ class ProductProvider extends Component {
     singleProduct: {},
     loading: true,
     /*for the search filter product*/
-    search:"",
-    price:0,
-    min:0,
-    max:0,
-    company:"all",
+    search: "",
+    price: 0,
+    min: 0,
+    max: 0,
+    company: "all",
     shipping: false
   };
 
@@ -48,13 +48,13 @@ class ProductProvider extends Component {
 
     this.setState({
       storeProducts,
-      filteredProducts: storeProducts,
+      filteredProducts: storeProducts, // برای اینکه بعدن میخواهیم محصولاتون فیلتر شود در رندر کردن محصولات در صفحه محصولات از این متغیر استفاده میکنیم کارمون راحتر میشود
       featuredProducts,
       cart: this.getStorageCart(),
       singleProduct: this.getStorageProduct(),
       loading: false,
-      price:maxPrice,
-      max:maxPrice,
+      price: maxPrice,
+      max: maxPrice,
     }, () => {
       this.addTotals()
     })
@@ -240,10 +240,38 @@ class ProductProvider extends Component {
   /***handle search filtering****/
   handleChange = e => {
     this.setState({
-      [e.target.name] : e.target.type === "checkbox" ? e.target.checked : e.target.value
+      [e.target.name]: e.target.type === "checkbox" ? e.target.checked : e.target.value
     }, this.sortDate) // نمیخواهیم اینجا اجرا بشه فقط ارجاع داده میشود به تابع بعدی
   };
-  sortDate = () =>{};
+  sortDate = () => {
+    const {storeProducts, search, shipping, company} = this.state;
+    const price = parseFloat(this.state.price); // چون رشته برمیگرده و باید عددیش کنیم
+    //clone
+    let tempProducts = [...storeProducts];
+    //filter base on company
+    if (company !== "all") {
+      tempProducts = tempProducts.filter(item => item.company === company);
+    }
+    //filter base on shipping
+    if (shipping) {
+      tempProducts = tempProducts.filter(item => item.shipping === shipping);
+    }
+    //filter base on SEARCH
+    if (search.length > 0) {
+      tempProducts = tempProducts.filter(item => {
+        let tempSearch = search.toLowerCase();
+        let tempTitle = item.title.toLowerCase().slice(0, search.length); // برای این اسلایس میکنیم که اگه یک کلمه هم در سرچ جستوجو شد مطابقش محصول جستوجو کند
+        if (tempSearch === tempTitle) {
+          return item;
+        }
+      })
+    }
+    //filter base on price
+    tempProducts = tempProducts.filter(item => item.price <= price);
+    this.setState({
+      filteredProducts: [...tempProducts]
+    })
+  };
 
   render() {
     return (

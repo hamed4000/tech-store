@@ -26,7 +26,7 @@ const ProductFilter = () => {
         {
           value => {
             const {handleChange, search, min, max, company, price, shipping, storeProducts} = value;
-            /*کد زیر روشی برای ساخت ارایه برای بدست اوردن مقادیر که میخواهیم در select به کار رود*/
+            /*کد زیر روشی برای بدست اوردن مقادیر که میخواهیم در select به کار رود به صورت ارایه میگیریم*/
             /****start****/
             let companies = new Set();
             companies.add("all");
@@ -57,8 +57,8 @@ const ProductFilter = () => {
                                 className="filter-item"
                                 onChange={handleChange}
                                 value={company}>
-                          <option value="all">all</option>
-                          {/*این روش اینجا برای اپشن های سلکت جواب نمیده*/}
+                          {/*<option value="all">all</option>
+                          در اینجا ازین روش استفاده نکردیم روش جدید دیگری امتحان کردیم*/}
                           {/*{
                             storeProducts.map((item, index) => {
                               return(
