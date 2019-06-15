@@ -238,7 +238,11 @@ class ProductProvider extends Component {
   };
 
   /***handle search filtering****/
-  handleChange = e => {};
+  handleChange = e => {
+    this.setState({
+      [e.target.name] : e.target.type === "checkbox" ? e.target.checked : e.target.value
+    }, this.sortDate) // نمیخواهیم اینجا اجرا بشه فقط ارجاع داده میشود به تابع بعدی
+  };
   sortDate = () =>{};
 
   render() {
