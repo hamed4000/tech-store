@@ -163,28 +163,44 @@ class ProductProvider extends Component {
 
 
   /*cart functionality*/
-  increment = id =>{
+  increment = id => {
     //clone
     let tempCart = [...this.state.cart];
     const cartItem = tempCart.find(item => item.id === id);
     cartItem.count++;
     cartItem.total = (cartItem.price * cartItem.count);
     cartItem.total = parseFloat(cartItem.total.toFixed(2));
-    this.setState(()=>{
+    this.setState(() => {
       return {
         cart: [...tempCart]
       }
-    }, ()=> {
+    }, () => {
       this.addTotals();
       this.syncStorage();
     })
   };
-  decrement = id =>{};
+  decrement = id => {
+    let tempCart = [...this.state.cart];
+    let itemCart = tempCart.find(item => item.id === id);
+    itemCart.count--;
+    if (itemCart.count === 0) {
+      this.removeItem(id)
+    } else {
+      itemCart.total = itemCart.count * itemCart.price;
+      itemCart.total = parseFloat(itemCart.total.toFixed(2));
+      this.setState({
+        cart: [...tempCart]
+      }, () => {
+        this.addTotals();
+        this.syncStorage();
+      })
+    }
+  };
   removeItem = id => {
     //کپی
     let tempCart = [...this.state.cart];
     //پیدا کردن جایه محصول در ارایه کارت
-    let index = tempCart.findIndex(item => item.id ===id);
+    let index = tempCart.findIndex(item => item.id === id);
     //پاک کردن به دورش زیر
     // 1.
     tempCart = [
@@ -194,13 +210,20 @@ class ProductProvider extends Component {
     // 2.
     // tempCart.splice(index,1);
     this.setState({
-      cart:[...tempCart]
-    }, ()=>{
+      cart: [...tempCart]
+    }, () => {
       this.addTotals();
       this.syncStorage();
     })
   };
-  clearCart = () =>{};
+  clearCart = () => {
+    this.setState({
+      cart: []
+    }, () => {
+      this.addTotals();
+      this.syncStorage();
+    })
+  };
 
   render() {
     return (
