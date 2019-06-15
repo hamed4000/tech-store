@@ -4,6 +4,7 @@ import React, {Component} from 'react';
 import {linkData} from "./LinkData";
 import {socialData} from "./socialData";
 import {items} from "./productData";
+import client from "./ContentFullApi";
 
 const ProductContext = React.createContext();
 
@@ -147,6 +148,10 @@ class ProductProvider extends Component {
 
   componentDidMount() {
     this.setProduct(items)
+    // client.getEntries({
+    //   content_type: "reactTechStore"
+    //   // مقداری که در اینجا مشخص میکنیم باعث میشه که به Content Model مورد نظر وصل شود
+    // }).then(response => this.setProduct(response.items))
   }
 
   handleSidebar = () => {
