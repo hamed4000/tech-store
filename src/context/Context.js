@@ -163,7 +163,22 @@ class ProductProvider extends Component {
 
 
   /*cart functionality*/
-  increment = id =>{};
+  increment = id =>{
+    //clone
+    let tempCart = [...this.state.cart];
+    const cartItem = tempCart.find(item => item.id === id);
+    cartItem.count++;
+    cartItem.total = (cartItem.price * cartItem.count);
+    cartItem.total = parseFloat(cartItem.total.toFixed(2));
+    this.setState(()=>{
+      return {
+        cart: [...tempCart]
+      }
+    }, ()=> {
+      this.addTotals();
+      this.syncStorage();
+    })
+  };
   decrement = id =>{};
   removeItem = id => {};
   clearCart = () =>{};
