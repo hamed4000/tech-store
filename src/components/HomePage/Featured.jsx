@@ -9,7 +9,7 @@ const Featured = () => {
       <section className="py-5">
         <div className="container">
           {/*title*/}
-          <Title title="feature products" center="true"/>
+          <Title title="محصولات برگزیده" center="true"/>
         {/*  products*/}
           <div className="row">
             <ProductConsumer>
@@ -26,7 +26,7 @@ const Featured = () => {
           <div className="row mt-5">
             <div className="col text-center">
               <Link to="/products" className="main-link">
-                our products
+                دیگر محصولات
               </Link>
             </div>
           </div>

@@ -12,10 +12,10 @@ const CartTotals = () => {
                 const {clearCart, cartSubTotal, cartTax, cartTotal} = value;
                 return (
                     <div className="col text-title text-center my-4">
-                      <button className="btn btn-outline-danger mb-4" onClick={clearCart}>clear cart</button>
-                      <h3> $ {cartSubTotal} قیمت محصولات :</h3>
-                      <h3> $ {cartTax} مالیات :</h3>
-                      <h3> $ {cartTotal} مجموع :</h3>
+                      <button className="btn btn-outline-danger mb-4" onClick={clearCart}>پاک کردن سبد خرید</button>
+                      <h3>   قیمت محصول : {cartSubTotal}ريال</h3>
+                      <h3>   مالیات : {cartSubTotal}ريال</h3>
+                      <h3>   مجموع : {cartSubTotal}ريال</h3>
                     </div>
                     
                 )

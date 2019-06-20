@@ -11,13 +11,13 @@ const CartItem = ({decrement, increment, removeItem, id, title, price, count, to
         </div>
         {/*name*/}
         <div className="col-10 mx-auto col-lg-2 pb-2">
-          <span className="d-lg-none">product :</span>
+          <span className="d-lg-none">نام محصول :</span>
           {/* چون در حالت صفحه کوچیک میخواهیم جدول نباشد این را قرار میدهیم پس در حالت بزرگ این حرف میشه */}
           {title}
         </div>
         {/*price*/}
         <div className="col-10 mx-auto col-lg-2 pb-2">
-          <span className="d-lg-none">price :</span>${price}
+          <span className="d-lg-none">قیمت :</span>ريال{price}
         </div>
         {/*count and increment and decrement*/}
         <div className="col-10 mx-auto col-lg-2 my-2 my-lg-0">
@@ -33,7 +33,7 @@ const CartItem = ({decrement, increment, removeItem, id, title, price, count, to
         </div>
 
         <div className="col-10 mx-auto col-lg-2">
-          <strong className="text-muted">item total :</strong>${total}
+          <strong className="text-muted">مجموع قیمت :</strong>ريال{total}
         </div>
       </div>
   );

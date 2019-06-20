@@ -43,16 +43,16 @@ const SideCart = () => {
                             <img src={`../${item.image}`} alt="cart item" width="45"/>
                             <div className="mt-3">
                               <h6 className="text-uppercase">{item.title}</h6>
-                              <h6 className="text-title text-capitalize"> mount : {item.count}</h6>
+                              <h6 className="text-title text-capitalize"> تعداد : {item.count}</h6>
                             </div>
                           </li>
                       ))
                     }
                   </ul>
-                  <h4 className="text-capitalize text-main">cart total: {cartTotal} $</h4>
+                  <h4 className="text-capitalize text-main">مجموع: {cartTotal} ريال</h4>
                   <div className="text-center my-5">
                     <Link to="/cart" className="main-link">
-                      cart page
+                      رفتن به سبد خرید
                     </Link>
                   </div>
                 </CartWrapper>

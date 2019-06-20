@@ -7,8 +7,8 @@ import Featured from "../components/HomePage/Featured";
 const HomePage = () => {
   return (
       <>
-        <Hero title="awesome gadgets" max="true">
-          <Link to="/products" className="main-link">our products</Link>
+        <Hero title="برترین گجت ها" max="true">
+          <Link to="/products" className="main-link mt-3">همه محصولات</Link>
         </Hero>
         <Services/>
         <Featured/>

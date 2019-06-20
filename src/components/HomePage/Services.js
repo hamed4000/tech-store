@@ -20,23 +20,23 @@ class Services extends Component {
       {
         id: 1,
         icon: <FaDolly/>,
-        title: "free shipping",
+        title: "تحویل رایگان",
         text:
-            " Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, accusamus."
+            "چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. "
       },
       {
         id: 2,
         icon: <FaRedo/>,
-        title: "30 days return policy",
+        title: "گارانتی بازگشت وجه 30روز",
         text:
-            " Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, accusamus."
+            "کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت "
       },
       {
         id: 3,
         icon: <FaDollarSign/>,
-        title: "secured payment",
+        title: "پرداخت امن",
         text:
-            " Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, accusamus."
+            "بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید "
       }
     ]
   };
@@ -53,7 +53,7 @@ class Services extends Component {
                         key={item.id}
                     >
                       <div className="service-icon">{item.icon}</div>
-                      <div className="mt-3 text-capitalize">{item.title}</div>
+                      <div className="mt-3 text-capitalize font-weight-bold">{item.title}</div>
                       <div className="mt-3">{item.text}</div>
                     </div>
                 ))

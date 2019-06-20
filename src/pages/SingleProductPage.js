@@ -24,7 +24,7 @@ const SingleProductPage = () => {
 
               if (loading) {
                 console.log("hello from loading");
-                return <h1>product loading....</h1>;
+                return <h1>منتظر بمانید....</h1>;
               }
               return (
                   <section className="py-5">
@@ -39,15 +39,15 @@ const SingleProductPage = () => {
                           />
                         </div>
                         <div className="col-10 mx-auto col-sm-8 col-md-6 my-3">
-                          <h5 className="text-title mb-4">model :{title} </h5>
+                          <h5 className="text-title mb-4">مدل :{title} </h5>
                           <h5 className="text-capitalize text-muted mb-4">
-                            company : {company}
+                            سازنده : {company}
                           </h5>
                           <h5 className="text-main text-capitalize mb-4">
-                            price : ${price}
+                            {price} قیمت : ريال
                           </h5>
                           <p className="text-capitalize text-title mt-3">
-                            some info about product :
+                            درباره محصول :
                           </p>
                           <p>{description}</p>
                           <button
@@ -56,14 +56,14 @@ const SingleProductPage = () => {
                               style={{margin: "0.75rem"}}
                               onClick={() => addToCart(id)}
                           >
-                            add to cart
+                            اضافه به سبد خرید
                           </button>
                           <Link
                               to="/products"
                               className="main-link"
                               style={{margin: "0.75rem"}}
                           >
-                            back to products
+                            بازگشت به صفحه محصولات
                           </Link>
                         </div>
                       </div>

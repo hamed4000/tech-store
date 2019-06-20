@@ -7,27 +7,27 @@ const CartColumn = () => {
         <div className="row">
 
           <div className="col-10 max-auto col-lg-2">
-            <p>product</p>
+            <p>تصویر</p>
           </div>
 
           <div className="col-10 max-auto col-lg-2">
-            <p>name of product</p>
+            <p>نام محصول</p>
           </div>
 
           <div className="col-10 max-auto col-lg-2">
-            <p>price</p>
+            <p>قیمت</p>
           </div>
 
           <div className="col-10 max-auto col-lg-2">
-            <p>quantity</p>
+            <p>تعداد</p>
           </div>
 
           <div className="col-10 max-auto col-lg-2">
-            <p>remove</p>
+            <p>حذف</p>
           </div>
 
           <div className="col-10 max-auto col-lg-2">
-            <p>total</p>
+            <p>مجموع</p>
           </div>
 
         </div>

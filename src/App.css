@@ -22,7 +22,7 @@
 }
 
 body {
-    font-family: 'Ganjnameh', sans-serif;
+    font-family: 'Ganjnameh', sans-serif !important;
     background: var(--mainGrey) !important;
     color: var(--mainBlack);
 }
@@ -39,12 +39,11 @@ body {
     font-weight: bold;
 }
 .main-link {
+    font-size: 1.3rem;
     display: inline-block;
     padding: .5rem 1rem;
     background: var(--primaryColor);
     color: var(--mainWhite);
-    text-transform: uppercase;
-    letter-spacing: var(--mainSpacing);
     outline: 2px solid var(--primaryColor);
     outline-offset: 4px;
     border: none;

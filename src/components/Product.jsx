@@ -81,7 +81,7 @@ const Product = ({id, image, title, price}) => {
                     </div>
                     <div className="card-body d-flex justify-content-between">
                       <p className="mb-0">{title}</p>
-                      <p className="mb-0 text-main">${price}</p>
+                      <p className="mb-0 text-main">ريال{price}</p>
                     </div>
                   </div>
                 </ProductWrapper>

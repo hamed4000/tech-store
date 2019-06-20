@@ -29,7 +29,7 @@ const ProductFilter = () => {
             /*کد زیر روشی برای بدست اوردن مقادیر که میخواهیم در select به کار رود به صورت ارایه میگیریم*/
             /****start****/
             let companies = new Set();
-            companies.add("all");
+            companies.add("همه");
             for (let product in storeProducts) {
               companies.add(storeProducts[product]["company"]);
             }
@@ -41,7 +41,7 @@ const ProductFilter = () => {
                     <FilterWrapper>
                       {/*search input*/}
                       <div>
-                        <label htmlFor="search">search product</label>
+                        <label htmlFor="search">فیلترِ محصولات</label>
                         <input type="text"
                                name="search"
                                id="search"
@@ -51,7 +51,7 @@ const ProductFilter = () => {
                       </div>
                       {/*company input*/}
                       <div>
-                        <label htmlFor="company">company</label>
+                        <label htmlFor="company">سازنده</label>
                         <select name="company"
                                 id="company"
                                 className="filter-item"
@@ -79,7 +79,7 @@ const ProductFilter = () => {
                       <div>
                         <label htmlFor="price">
                           <p>
-                            price product: <span>${price}</span>
+                            قیمت: <span>{price}ريال</span>
                           </p>
                         </label>
                         <input type="range"
@@ -95,7 +95,7 @@ const ProductFilter = () => {
                       <div>
                         <label htmlFor="shipping">
                           <p>
-                            free shipping
+                            تحویل رایگان
                           </p>
                         </label>
                         <input type="checkbox"

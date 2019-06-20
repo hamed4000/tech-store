@@ -14,13 +14,13 @@ const Products = () => {
                 <section className="py-5">
                   <div className="container">
                     {/*title*/}
-                    <Title title="our products" center/>
+                    <Title title="محصولات" center/>
                     {/*filtering box*/}
                     <ProductFilter/>
                     {/*count total product*/}
                     <div className="row">
                       <div className="col-10 mx-auto">
-                        <h6 className="text-title">total product: {filteredProducts.length}</h6>
+                        <h6 className="text-title">تعداد کل محصولات: {filteredProducts.length}</h6>
                       </div>
                     </div>
                     {/*products*/}

@@ -9,7 +9,7 @@ const Cart = () => {
       <section className="py-5">
         {/*title*/}
         <div className="container">
-          <Title center="center" title="your cart items"/>
+          <Title center="center" title="سبد خرید شما"/>
         </div>
         {/*cart columns*/}
         <CartColumn/>
