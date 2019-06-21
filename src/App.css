@@ -1,60 +1,60 @@
-@import url('https://fonts.googleapis.com/css?family=Macondo+Swash+Caps&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Macondo+Swash+Caps&display=swap");
 
 @font-face {
-    font-family: 'Ganjnameh';
-    src: url('http://cdn.font-store.ir/fonts/ganjnameh/GanjNamehSans-Regular.woff2') format('woff2'),
-    url('http://cdn.font-store.ir/fonts/ganjnameh/GanjNamehSans-Regular.woff') format('woff'),
-    url('http://cdn.font-store.ir/fonts/ganjnameh/GanjNamehSans-Regular.ttf') format('truetype'),
-    url('http://cdn.font-store.ir/fonts/ganjnameh/GanjNamehSans-Regular.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "ُShabnam";
+  src: url("/font/Shabnam.woff2") format("woff2"),
+    url("/font/Shabnam.woff") format("woff"),
+    url("/font/Shabnam.ttf") format("truetype"),
+    url("/font/Shabnam.eot") format("opentype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 :root {
-    --primaryColor: #5fb7ea;
-    --primaryRGBA: rgba(0, 0, 0, 0.3);
-    --mainGrey: #fafafa;
-    --darkGrey: #5f5e5e;
-    --mainWhite: #fff;
-    --mainBlack: #222;
-    --mainTransition: all 0.3s ease-in-out;
-    --mainSpacing: 0.3rem;
+  --primaryColor: #5fb7ea;
+  --primaryRGBA: rgba(0, 0, 0, 0.3);
+  --mainGrey: #fafafa;
+  --darkGrey: #5f5e5e;
+  --mainWhite: #fff;
+  --mainBlack: #222;
+  --mainTransition: all 0.3s ease-in-out;
+  --mainSpacing: 0.3rem;
 }
 
 body {
-    font-family: 'Ganjnameh', sans-serif !important;
-    background: var(--mainGrey) !important;
-    color: var(--mainBlack);
+  font-family: "ُShabnam", sans-serif !important;
+  background: var(--mainGrey) !important;
+  color: var(--mainBlack);
 }
 
 .text-navHeader {
-    font-family: 'Macondo Swash Caps', cursive;
+  font-family: "Macondo Swash Caps", cursive;
 }
 
 .text-main {
-    color: var(--primaryColor);
+  color: var(--primaryColor);
 }
 
 .text-title {
-    font-weight: bold;
+  font-weight: bold;
 }
 .main-link {
-    font-size: 1.3rem;
-    display: inline-block;
-    padding: .5rem 1rem;
-    background: var(--primaryColor);
-    color: var(--mainWhite);
-    outline: 2px solid var(--primaryColor);
-    outline-offset: 4px;
-    border: none;
-    transition: var(--mainTransition);
+  font-size: 1.3rem;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: var(--primaryColor);
+  color: var(--mainWhite);
+  outline: 2px solid var(--primaryColor);
+  outline-offset: 4px;
+  border: none;
+  transition: var(--mainTransition);
 }
-.main-link:hover{
-    background: var(--darkGrey);
-    color: var(--primaryColor);
-    outline-color: var(--darkGrey);
-    text-decoration: none;
+.main-link:hover {
+  background: var(--darkGrey);
+  color: var(--primaryColor);
+  outline-color: var(--darkGrey);
+  text-decoration: none;
 }
-.cart-icon{
-    cursor: pointer;
+.cart-icon {
+  cursor: pointer;
 }
